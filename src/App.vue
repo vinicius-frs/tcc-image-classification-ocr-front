@@ -64,12 +64,12 @@ export default {
   methods: {
     async changeInputFile(){
       this.arrImagens = [];
-      this.renderTables = false;
-      this.loading = true;
       const files = document.querySelector('input[type=file]').files;
       if(files.length === 0){
         alert("Selecione um arquivo"); return false;
       }
+      this.renderTables = false;
+      this.loading = true;
       
       for(let i = 0; i < files.length; i++){
         let file = files[i];
